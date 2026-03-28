@@ -3,346 +3,513 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="Full Stack Developer | Java Spring Boot | React.js | GraphQL" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prasad Kadu — Full Stack Developer | Java Spring Boot | React.js | GraphQL" />
   <meta name="author" content="Prasad Kadu" />
   <title>Prasad Kadu | Full Stack Developer</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.svg" />
-  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 
-<body id="page-top">
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Prasad Kadu</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/img/img.png"
-          alt="Profile Picture" />
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-      </ul>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#about" class="nav-logo">Prasad<span>.</span>dev</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link active">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#certifications" class="nav-link">Certifications</a>
+        <a href="#interests" class="nav-link">Interests</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <div class="container-fluid p-0">
-    <!-- About -->
-    <section class="resume-section" id="about">
-      <div class="resume-section-content">
-        <h1 class="mb-0">Prasad <span class="text-primary">Kadu</span></h1>
-        <br>
-        <div class="subheading mb-5">
-          <span>Pune, India &nbsp; | &nbsp;<a href="mailto:kaduprasad99@gmail.com">kaduprasad99@gmail.com</a> &nbsp; |
-            &nbsp; 7774048434 </span>
+  <main>
+    <!-- About / Hero -->
+    <section id="about" class="section hero-section">
+      <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="hero-floating-icons">
+          <i class="devicon-java-plain hero-bg-icon" style="top: 12%; right: 8%; font-size: 7rem; animation-delay: 0s;"></i>
+          <i class="devicon-spring-plain hero-bg-icon" style="top: 35%; right: 18%; font-size: 5rem; animation-delay: 3s;"></i>
+          <i class="devicon-react-original hero-bg-icon" style="top: 60%; right: 6%; font-size: 6rem; animation-delay: 1.5s;"></i>
+          <i class="devicon-javascript-plain hero-bg-icon" style="top: 78%; right: 22%; font-size: 4.5rem; animation-delay: 4s;"></i>
+          <i class="devicon-python-plain hero-bg-icon" style="top: 15%; left: 8%; font-size: 5rem; animation-delay: 2s;"></i>
+          <i class="devicon-typescript-plain hero-bg-icon" style="top: 70%; left: 8%; font-size: 4rem; animation-delay: 5s;"></i>
+          <i class="devicon-graphql-plain hero-bg-icon" style="top: 45%; left: 3%; font-size: 5.5rem; animation-delay: 2.5s;"></i>
+          <i class="devicon-postgresql-plain hero-bg-icon" style="top: 88%; right: 10%; font-size: 4rem; animation-delay: 3.5s;"></i>
+          <i class="devicon-docker-plain hero-bg-icon" style="top: 88%; left: 10%; font-size: 4rem; animation-delay: 3.5s;"></i>
         </div>
-        <p class="lead mb-5">
-          Full Stack Software Developer with <b>~4 years</b> of professional experience. Designed and developed web
-          applications across multiple APIs.
-          <b>Proficient in Java Spring Boot, Node.js, and React</b> with expertise in databases like PostgreSQL.
-          Additionally, I have experience with <b>Kafka publisher-subscriber patterns, REST APIs, GraphQL, and CI/CD
-            deployment processes</b>.
-          Skilled in development tools such as <b>Postman, Git, and GitHub Copilot</b>.
+      </div>
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="./assets/img/img.png" alt="Prasad Kadu" />
+        </div>
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Prasad <span class="gradient-text">Kadu</span></h1>
+        <p class="hero-title">Full Stack Developer</p>
+        <div class="hero-contact">
+          <span><i class="fas fa-map-marker-alt"></i> Pune, India</span>
+          <span><i class="fas fa-envelope"></i> <a
+              href="mailto:kaduprasad99@gmail.com">kaduprasad99@gmail.com</a></span>
+          <span><i class="fas fa-phone"></i> 7774048434</span>
+        </div>
+        <p class="hero-description">
+          Full Stack Software Developer with <strong>~5 years</strong> of professional experience. Designed and
+          developed web applications across multiple APIs.
+          <strong>Proficient in Java Spring Boot, Node.js, and React</strong> with expertise in databases like
+          PostgreSQL. Additionally, I have experience with <strong>Kafka publisher-subscriber patterns, REST APIs,
+            GraphQL, and CI/CD deployment processes</strong>.
+          Skilled in development tools such as <strong>Postman, Git, and GitHub Copilot</strong>.
           Made significant contributions to system enhancements, improving overall functionality and user experience.
         </p>
         <div class="social-icons">
-          <a class="social-icon" href="https://www.linkedin.com/in/prasad-kadu-13b579162/"><i
+          <a class="social-icon" href="https://www.linkedin.com/in/prasad-kadu-13b579162/" aria-label="LinkedIn"><i
               class="fab fa-linkedin-in"></i></a>
-          <a class="social-icon" href="https://github.com/kaduprasad"><i class="fab fa-github"></i></a>
+          <a class="social-icon" href="https://github.com/kaduprasad" aria-label="GitHub"><i
+              class="fab fa-github"></i></a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
         </div>
       </div>
     </section>
-
-    <hr class="m-0" />
 
     <!-- Experience -->
-    <section class="resume-section" id="experience">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Experience</h2>
-
-        <!-- Yash Technologies -->
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Senior Software Engineer</h3>
-            <div class="subheading mb-3">Yash Technologies</div>
-            <ul>
-              <li>Worked with John Deere, on a comprehensive cloud-based after sales <b>Insurance Management System</b>
-                used by John Deere representatives and dealers across the
-                North America.</li>
-              <li><b>Played a key role</b> in developing <b>5+ features</b> using <b>React
-                  (frontend) and Java Spring Boot (backend microservices)</b>, with
-                PostgreSQL as the database.</li>
-              <li><b>Mentored junior developers</b>, conducted <b>code reviews, debugging, and troubleshooting</b></li>
-              <li>Leveraged AI tools like <b>GitHub Copilot and ChatGPT</b> to boost productivity and accelerate
-                development cycles.</li>
-            </ul>
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+          <!-- Yash Technologies -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Senior Software Engineer</h3>
+                  <h4 class="company">Yash Technologies</h4>
+                </div>
+                <span class="timeline-date">March 2025 — Present</span>
+              </div>
+              <ul>
+                <li>Worked with John Deere, on a comprehensive cloud-based after sales <strong>Extended Service and Warranty Management
+                    System</strong> used by John Deere representatives and dealers across North America.</li>
+                <li><strong>Played a key role</strong> in developing <strong>5+ features</strong> using <strong>React
+                    (frontend) and Java Spring Boot (backend microservices)</strong>, with PostgreSQL as the database.
+                </li>
+                <li><strong>Mentored junior developers</strong>, conducted <strong>code reviews, debugging, and
+                    troubleshooting</strong></li>
+                <li>Leveraged AI tools like <strong>GitHub Copilot and ChatGPT</strong> to boost productivity and
+                  accelerate development cycles.</li>
+              </ul>
+            </div>
           </div>
-          <div class="flex-shrink-0"><span class="text-primary">March 2025 - Present</span></div>
-        </div>
 
-        <!-- Bridgenext -->
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Software Development Engineer</h3>
-            <div class="subheading mb-3">BridgeNext Technologies</div>
-            <ul>
-              <li>Worked on a comprehensive cloud-based <b>Transportation Management System (TMS)</b> used across the
-                US, Canada, and Mexico.</li>
-              <li><b>Played a key role</b> in developing <b>15+ features</b> for the TMS platform using <b>React
-                  (frontend), Node.js (Nest.js Framework), and Java Spring Boot (backend microservices)</b>, with
-                PostgreSQL as the database.</li>
-              <li><b>Enhanced order tracking</b> by implementing an auditing feature with <b>Kafka messaging queues,
-                  Java Spring Boot, and GraphQL</b>, improving transparency and reducing external API calls by
-                <b>20%</b>.
-              </li>
-              <li><b>Collaborated with stakeholders</b> for requirement gathering, technical analysis, and user story
-                mapping, ensuring well-defined development roadmaps.</li>
-              <li><b>Optimized search performance</b> by refining SQL queries, improving data retrieval speed for
-                scheduled orders by <b>30%</b>.</li>
-              <li><b>Mentored junior developers</b>, conducted <b>code reviews, debugging, and troubleshooting</b>,
-                while gaining experience in CI/CD pipelines using GitHub Actions.</li>
-              <li>Leveraged AI tools like <b>GitHub Copilot and ChatGPT</b> to boost productivity and accelerate
-                development cycles.</li>
-            </ul>
+          <!-- BridgeNext -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Software Development Engineer</h3>
+                  <h4 class="company">BridgeNext Technologies</h4>
+                </div>
+                <span class="timeline-date">July 2021 — March 2025</span>
+              </div>
+              <ul>
+                <li>Worked on a comprehensive cloud-based <strong>Transportation Management System (TMS)</strong> used
+                  across the US, Canada, and Mexico.</li>
+                <li><strong>Played a key role</strong> in developing <strong>15+ features</strong> for the TMS platform
+                  using <strong>React (frontend), Node.js (Nest.js Framework), and Java Spring Boot (backend
+                    microservices)</strong>, with PostgreSQL as the database.</li>
+                <li><strong>Enhanced order tracking</strong> by implementing an auditing feature with <strong>Kafka
+                    messaging queues, Java Spring Boot, and GraphQL</strong>, improving transparency and reducing
+                  external API calls by <strong>20%</strong>.</li>
+                <li><strong>Collaborated with stakeholders</strong> for requirement gathering, technical analysis, and
+                  user story mapping, ensuring well-defined development roadmaps.</li>
+                <li><strong>Optimized search performance</strong> by refining SQL queries, improving data retrieval speed
+                  for scheduled orders by <strong>30%</strong>.</li>
+                <li><strong>Mentored junior developers</strong>, conducted <strong>code reviews, debugging, and
+                    troubleshooting</strong>, while gaining experience in CI/CD pipelines using GitHub Actions.</li>
+                <li>Leveraged AI tools like <strong>GitHub Copilot and ChatGPT</strong> to boost productivity and
+                  accelerate development cycles.</li>
+              </ul>
+            </div>
           </div>
-          <div class="flex-shrink-0"><span class="text-primary">July 2021 - March 2025</span></div>
         </div>
       </div>
     </section>
 
-
-    <hr class="m-0" />
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="edu-header-with-logo">
+                  <img src="./assets/img/BITS_Pilani-Logo.svg.png" alt="BITS Pilani" class="edu-logo" />
+                  <div>
+                    <h3>Birla Institute of Technology and Science, Pilani</h3>
+                    <p>Master of Technology — MTech WILP, Artificial Intelligence &amp; Machine Learning</p>
+                  </div>
+                </div>
+                <span class="timeline-date">Oct 2025 — Jun 2027</span>
+              </div>
+              <div class="tech-tags" style="margin-top: 0.75rem;">
+                <span>Python</span><span>AI/ML</span><span>Deep Learning</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="edu-header-with-logo">
+                  <img src="./assets/img/Savitribai_Phule_Pune_University_Logo.png" alt="SPPU" class="edu-logo" />
+                  <div>
+                    <h3>Savitribai Phule Pune University</h3>
+                    <p>Bachelor of Computer Science Engineering | <strong>CGPA: 8.75</strong></p>
+                  </div>
+                </div>
+                <span class="timeline-date">2017 — 2021</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="edu-header-with-logo">
+                  <img src="./assets/img/Garware.png" alt="Garware" class="edu-logo" />
+                  <div>
+                    <h3>Abasaheb Garware High School</h3>
+                    <p>HSC | <strong>Percentage: 80.15%</strong></p>
+                  </div>
+                </div>
+                <span class="timeline-date">2015 — 2017</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div class="edu-header-with-logo">
+                  <img src="./assets/img/MIT.png" alt="MIT School" class="edu-logo" />
+                  <div>
+                    <h3>MIT School, Pune</h3>
+                    <p>SSC | <strong>Percentage: 92.2%</strong></p>
+                  </div>
+                </div>
+                <span class="timeline-date">2014 — 2015</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects -->
-    <section class="resume-section" id="projects">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Projects</h2>
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Projects</h2>
 
-        <h3 class="mb-5">Enterprise Projects</h3>
+        <h3 class="subsection-title reveal">Enterprise Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-icon"><i class="fas fa-tractor"></i></div>
+            <h3>Extended Services Insurance Warranty Management</h3>
+            <ul>
+              <li>Worked with John Deere client team to develop an <strong>admin tool (web application)</strong> that helps admins create, edit, and publish extended service packages for John Deere <strong>Agriculture and C&amp;F division</strong> equipment and vehicles.</li>
+              <li>Helped develop a <strong>dealer-facing web application</strong> where dealers can view published packages for specific models, generate quotations for customers, and create purchase contracts.</li>
+              <li>Built backend microservices using <strong>Java Spring Boot</strong> along with <strong>Python FastAPI</strong> and <strong>OpenSearch</strong> for search functionality.</li>
+              <li>Developed the frontend using <strong>React.js with Redux</strong> for state management across both admin and dealer applications.</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Java Spring Boot</span><span>Python FastAPI</span><span>OpenSearch</span><span>React.js</span><span>Redux</span><span>PostgreSQL</span>
+            </div>
+          </div>
 
-        <!-- Order Auditing: Tracking Order History and Actions -->
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Order Auditing: Real-Time Order History & Tracking</h3>
-            <p>
+          <div class="project-card reveal">
+            <div class="project-icon"><i class="fas fa-history"></i></div>
+            <h3>Order Auditing: Real-Time Order History &amp; Tracking</h3>
             <ul>
               <li>Implemented an audit tab to maintain a comprehensive history of order actions, including stop
                 additions/removals and order updates.</li>
-              <li>Developed backend functionality using <b>Java Spring Boot</b> with PostgreSQL, handling around 1
-                million records.</li>
-              <li>Integrated <b>Kafka consumers</b> to listen to 15+ event topics for real-time tracking and logging.
-              </li>
-              <li>Optimized performance with <b>Redis caching</b>, reducing database calls and improving efficiency.
-              </li>
+              <li>Developed backend functionality using <strong>Java Spring Boot</strong> with PostgreSQL, handling
+                around 1 million records.</li>
+              <li>Integrated <strong>Kafka consumers</strong> to listen to 15+ event topics for real-time tracking and
+                logging.</li>
+              <li>Optimized performance with <strong>Redis caching</strong>, reducing database calls and improving
+                efficiency.</li>
             </ul>
-            </p>
-            <p><b>Key Features:</b></p>
-            <ul>
-              <li><b>Real-time audit trail:</b> Leveraged Kafka consumers to track and display order actions in
+            <p><strong>Key Features:</strong></p>
+            <ul class="features-list">
+              <li><strong>Real-time audit trail:</strong> Leveraged Kafka consumers to track and display order actions in
                 real-time.</li>
-              <li><b>Comprehensive order lifecycle tracking:</b> Maintained a complete history of order modifications.
-              </li>
+              <li><strong>Comprehensive order lifecycle tracking:</strong> Maintained a complete history of order
+                modifications.</li>
             </ul>
-            <p><b>Technologies:</b> Java Spring Boot, Kafka Consumer, GraphQL, React.js, Redis, PostgreSQL</p>
+            <div class="tech-tags">
+              <span>Java Spring Boot</span><span>Kafka</span><span>GraphQL</span><span>React.js</span><span>Redis</span><span>PostgreSQL</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Orders Scheduling Page -->
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Order Scheduling</h3>
-            <p>
+          <div class="project-card reveal">
+            <div class="project-icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Order Scheduling</h3>
             <ul>
               <li>Developed a scheduling order page with a search filter and dynamic table displaying relevant order
                 details.</li>
-              <li>Built the backend using <b>Node.js (Nest.js framework)</b> to handle SQL queries and GraphQL
+              <li>Built the backend using <strong>Node.js (Nest.js framework)</strong> to handle SQL queries and GraphQL
                 responses.</li>
-              <li>Designed the frontend with <b>React.js</b> for an intuitive and seamless user experience.</li>
+              <li>Designed the frontend with <strong>React.js</strong> for an intuitive and seamless user experience.
+              </li>
               <li>Optimized database queries and indexing, improving query performance and response time.</li>
             </ul>
-            </p>
-            <p><b>Key Features:</b></p>
-            <ul>
-              <li><b>Default filters:</b> Implemented predefined filters for streamlined search.</li>
-              <li><b>Optimized query performance:</b> Enhanced speed with optimized SQL queries and indexes.</li>
-              <li><b>Multiselect chip filters:</b> Enabled users to filter search results efficiently.</li>
+            <p><strong>Key Features:</strong></p>
+            <ul class="features-list">
+              <li><strong>Default filters:</strong> Implemented predefined filters for streamlined search.</li>
+              <li><strong>Optimized query performance:</strong> Enhanced speed with optimized SQL queries and indexes.
+              </li>
+              <li><strong>Multiselect chip filters:</strong> Enabled users to filter search results efficiently.</li>
             </ul>
-            <p><b>Technologies:</b> TypeScript, Nest.js framework, React.js, PostgreSQL, GraphQL</p>
-          </div>
-        </div>
-
-        <hr>
-        <h3 class="mb-5">College Projects</h3>
-
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">
-              Brain Tumor Detection using Convolutional Neural Networks
-            </h3>
-            <div class="subheading mb-3">
-              Django, Convolutional Neural Networks, VGG 16
+            <div class="tech-tags">
+              <span>TypeScript</span><span>Nest.js</span><span>React.js</span><span>PostgreSQL</span><span>GraphQL</span>
             </div>
-            <p>
-              Created a web application where user can upload an image and the
-              application will generate a report, whether the uploaded image
-              is tumorous or not.
-              <br />User can also send diagnosed report as email to respective
-              user/doctor. <br />Also user can see the location of nearest
-              hospital using this application using opensource javascript map
-              api.
-              <a href="https://github.com/kaduprasad/djangoFinalProject">[Click Here]</a>
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">June 2020 - March 2021</span>
           </div>
         </div>
 
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Real Time Face Recognition Software</h3>
-            <div class="subheading mb-3">Python, Tkinter, OpenCv</div>
-            <p>
-              Developed software could recognize faces detected by the webcam
-              of a laptop. Used Open CV algorithm which tried to match the
-              facial features with the data set images. The software could
-              also count the number of faces in an image along with their
-              names
-              <a href="https://github.com/kaduprasad/Face-recognition-system">[Click Here]</a>
-            </p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">January 2020 - March 2020</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <hr class="m-0" />
-
-    <!-- Education-->
-    <section class="resume-section" id="education">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Education</h2>
-        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Savitribai Phule Pune University</h3>
-            <div>
-              <div>Bachelor of Computer Science Engineering <span>| <b>CGPA:
-                    8.75</b></span></div>
+        <h3 class="subsection-title reveal">College Projects</h3>
+        <div class="projects-grid">
+          <div class="project-card reveal">
+            <div class="project-icon"><i class="fas fa-brain"></i></div>
+            <h3>Brain Tumor Detection using CNNs</h3>
+            <p class="project-subtitle">Django · Convolutional Neural Networks · VGG 16</p>
+            <p>Created a web application where user can upload an image and the application will generate a report,
+              whether the uploaded image is tumorous or not. User can also send diagnosed report as email to respective
+              user/doctor. Also user can see the location of nearest hospital using this application using opensource
+              javascript map api.</p>
+            <div class="project-meta">
+              <span class="timeline-date">June 2020 — March 2021</span>
+              <a href="https://github.com/kaduprasad/djangoFinalProject" class="project-link"><i
+                  class="fab fa-github"></i> View Code</a>
             </div>
+          </div>
 
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">2017 - 2021</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">Abasaheb Garware High School</h3>
-            <p>HSC | <b>Percentage: 80.15%</b></p>
-            <br /><br />
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">2015 - 2017</span>
-          </div>
-        </div>
-        <div class="d-flex flex-column flex-md-row justify-content-between">
-          <div class="flex-grow-1">
-            <h3 class="mb-0">MIT School,Pune</h3>
-            <p>SSC | <b>Percentage: 92.2%</b></p>
-          </div>
-          <div class="flex-shrink-0">
-            <span class="text-primary">2014 - 2015</span>
+          <div class="project-card reveal">
+            <div class="project-icon"><i class="fas fa-user-check"></i></div>
+            <h3>Real Time Face Recognition Software</h3>
+            <p class="project-subtitle">Python · Tkinter · OpenCV</p>
+            <p>Developed software could recognize faces detected by the webcam of a laptop. Used Open CV algorithm which
+              tried to match the facial features with the data set images. The software could also count the number of
+              faces in an image along with their names.</p>
+            <div class="project-meta">
+              <span class="timeline-date">January 2020 — March 2020</span>
+              <a href="https://github.com/kaduprasad/Face-recognition-system" class="project-link"><i
+                  class="fab fa-github"></i> View Code</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
-    <hr class="m-0" />
 
     <!-- Skills -->
-    <!-- Skills -->
-    <section class="resume-section" id="skills">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Technical Skills</h2>
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Technical Skills</h2>
 
-        <p><b>Technologies:</b> Java Spring Boot, Spring MVC, React, GraphQL, SQL, REST API.</p>
-        <p><b>Programming Languages:</b> Core Java, Java 8, Java 17, JavaScript, TypeScript.</p>
-        <p><b>Databases:</b> Postgres, MySQL, SQL Server.</p>
-        <p><b>Messaging Queues:</b> Kafka message streaming.</p>
-        <p><b>Testing:</b> Junit, Mockito, Jest, Cypress.</p>
-        <p><b>Deployment:</b> Kubernetes (AKS), CI/CD, Github Action.</p>
-        <p><b>Dev Tools and IDE's:</b> IntelliJ IDEA, Postman, Docker, GitHub Copilot, Maven.</p>
-        <p><b>Other:</b> JPA, Hibernate ORM, Microservices, Git, Material UI, Redux, Redis Cache, HTML, CSS.</p>
+        <!-- Icon Showcase -->
+        <div class="skills-showcase reveal">
+          <div class="skill-icon-tile" data-label="Java">
+            <i class="devicon-java-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Spring">
+            <i class="devicon-spring-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="React">
+            <i class="devicon-react-original colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="JavaScript">
+            <i class="devicon-javascript-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="TypeScript">
+            <i class="devicon-typescript-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Python">
+            <i class="devicon-python-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Node.js">
+            <i class="devicon-nodejs-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="PostgreSQL">
+            <i class="devicon-postgresql-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="MySQL">
+            <i class="devicon-mysql-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="GraphQL">
+            <i class="devicon-graphql-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Docker">
+            <i class="devicon-docker-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Kubernetes">
+            <i class="devicon-kubernetes-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Kafka">
+            <i class="devicon-apachekafka-original colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Redis">
+            <i class="devicon-redis-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="HTML5">
+            <i class="devicon-html5-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="CSS3">
+            <i class="devicon-css3-plain colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Redux">
+            <i class="devicon-redux-original colored"></i>
+          </div>
+          <div class="skill-icon-tile" data-label="Material UI">
+            <i class="devicon-materialui-plain colored"></i>
+          </div>
+        </div>
+
+        <!-- Categorized Details -->
+        <div class="skills-grid reveal-group">
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-code"></i> Technologies</h4>
+            <div class="tech-tags">
+              <span>Java Spring Boot</span><span>Node JS</span><span>React</span><span>GraphQL</span><span>SQL</span><span>REST API</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-laptop-code"></i> Languages</h4>
+            <div class="tech-tags">
+              <span>Java</span><span>JavaScript</span><span>TypeScript</span><span>Python</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-database"></i> Databases</h4>
+            <div class="tech-tags">
+              <span>PostgreSQL</span><span>MySQL</span><span>SQL Server</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-stream"></i> Messaging</h4>
+            <div class="tech-tags">
+              <span>Kafka Message Streaming</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-vial"></i> Testing</h4>
+            <div class="tech-tags">
+              <span>JUnit</span><span>Mockito</span><span>Jest</span><span>Cypress</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-rocket"></i> Deployment</h4>
+            <div class="tech-tags">
+              <span>Kubernetes (AKS)</span><span>CI/CD</span><span>GitHub Actions</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-tools"></i> Dev Tools</h4>
+            <div class="tech-tags">
+              <span>IntelliJ IDEA</span><span>Postman</span><span>Docker</span><span>GitHub Copilot</span><span>Maven</span>
+            </div>
+          </div>
+          <div class="skill-category reveal">
+            <h4><i class="fas fa-cogs"></i> Other</h4>
+            <div class="tech-tags">
+              <span>JPA</span><span>Hibernate ORM</span><span>Microservices</span><span>Git</span><span>Material UI</span><span>Redux</span><span>Redis Cache</span><span>HTML</span><span>CSS</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-
-
-    <hr class="m-0" />
 
     <!-- Certifications -->
-    <section class="resume-section" id="certifications">
-      <div class="resume-section-content">
-        <h2 class="mb-4">Awards & Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span><a
-              href="https://www.youracclaim.com/badges/15061fd0-1a20-4621-9850-451f6a45222b?source=linked_in_profile"
-              style="font-size: 35x;">Java Programming - Microsoft Certification</a>
-          </li><br>
-          <li>
-            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-            <a href="https://www.youracclaim.com/badges/475ed68d-b276-42f3-8178-2a38ac64b436/linked_in_profile"
-              style="font-size: 35x;">Javascript - Microsoft Certification</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <hr class="m-0" />
-
-    <!-- Interests -->
-    <section class="resume-section" id="interests">
-      <div class="resume-section-content">
-        <h2 class="mb-5">Interests</h2>
-        <ul>
-          <li>Apart from coding, I enjoy outdoor activities such as <b>hiking and badmintion</b>.</li>
-          <li>I have hiked over 25+ forts in Maharashtra.</li>
-          <li>Riding is one of the new hobbies that I have developed, farthest I have travelled with my bike is
-            around 400kms.</li>
-          <li>I also actively take part in reviewing locations and places on google Maps, and I have over 200+
-            contributions
-            and reviews.</li>
-          <li>I also love <b>reading technology blogs</b> and staying updated with new advancements in <b>AI and cloud
-              computing</b>.</li>
-        </ul>
-        <br>
-        <div>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F" width="920"
-            height="480"></iframe>
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Awards &amp; Certifications</h2>
+        <div class="certifications-grid">
+          <a href="https://www.youracclaim.com/badges/15061fd0-1a20-4621-9850-451f6a45222b?source=linked_in_profile"
+            class="cert-card reveal">
+            <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+            <h3>Java Programming</h3>
+            <p>Microsoft Certification</p>
+          </a>
+          <a href="https://www.youracclaim.com/badges/475ed68d-b276-42f3-8178-2a38ac64b436/linked_in_profile"
+            class="cert-card reveal">
+            <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+            <h3>JavaScript</h3>
+            <p>Microsoft Certification</p>
+          </a>
         </div>
       </div>
     </section>
-  </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Interests -->
+    <section id="interests" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Interests</h2>
+        <div class="interests-content reveal">
+          <ul class="interests-list">
+            <li><i class="fas fa-hiking"></i> Apart from coding, I enjoy outdoor activities such as <b>hiking and
+                badminton</b></li>
+            <li><i class="fas fa-mountain"></i> I have hiked over 25+ forts in Maharashtra.</li>
+            <li><i class="fas fa-motorcycle"></i> Riding is one of the new hobbies that I have developed, farthest I
+              have travelled with my bike is around 400kms.</li>
+            <li><i class="fas fa-map-marked-alt"></i> I also actively take part in reviewing locations and places on
+              Google Maps, and I have over 200+ contributions and reviews.</li>
+            <li><i class="fas fa-book-reader"></i> I also love <strong>reading technology blogs</strong> and staying
+              updated with new advancements in <strong>AI and cloud computing</strong></li>
+          </ul>
+          <div class="map-container reveal">
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F"
+              width="100%" height="450" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Prasad Kadu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <script src="js/scripts.js"></script>
 </body>
 
