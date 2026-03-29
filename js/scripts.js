@@ -66,4 +66,72 @@ document.addEventListener('DOMContentLoaded', () => {
   backToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+
+  // ===== Lumos / Nox — Light/Dark Mode Toggle =====
+  const lumosBtn = document.getElementById('lumosBtn');
+  const themeOverlay = document.getElementById('themeOverlay');
+  const lumosBtnText = lumosBtn.querySelector('span');
+  const lumosBtnIcon = lumosBtn.querySelector('i');
+  let isTransitioning = false;
+
+  function toggleTheme() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    const isCurrentlyDark = !document.body.classList.contains('light-mode');
+    const rect = lumosBtn.getBoundingClientRect();
+    const originX = rect.left + rect.width / 2;
+    const originY = rect.top + rect.height / 2;
+
+    themeOverlay.style.setProperty('--origin-x', originX + 'px');
+    themeOverlay.style.setProperty('--origin-y', originY + 'px');
+
+    // Remove old classes
+    themeOverlay.classList.remove('expanding', 'collapsing', 'to-light', 'to-dark');
+
+    if (isCurrentlyDark) {
+      // Switching to light mode — overlay is light, expands out
+      themeOverlay.classList.add('to-light', 'expanding');
+    } else {
+      // Switching to dark mode — overlay is dark, expands out
+      themeOverlay.classList.add('to-dark', 'expanding');
+    }
+
+    themeOverlay.addEventListener('animationend', function handler() {
+      themeOverlay.removeEventListener('animationend', handler);
+
+      if (isCurrentlyDark) {
+        document.body.classList.add('light-mode');
+        lumosBtnText.textContent = 'Nox';
+        lumosBtnIcon.className = 'fas fa-hat-wizard';
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.body.classList.remove('light-mode');
+        lumosBtnText.textContent = 'Lumos';
+        lumosBtnIcon.className = 'fas fa-magic';
+        localStorage.setItem('theme', 'dark');
+      }
+
+      // Now collapse the overlay to reveal the new theme underneath
+      themeOverlay.classList.remove('expanding');
+      themeOverlay.classList.add('collapsing');
+
+      themeOverlay.addEventListener('animationend', function cleanup() {
+        themeOverlay.removeEventListener('animationend', cleanup);
+        themeOverlay.classList.remove('collapsing', 'to-light', 'to-dark');
+        themeOverlay.style.clipPath = '';
+        isTransitioning = false;
+      });
+    });
+  }
+
+  lumosBtn.addEventListener('click', toggleTheme);
+
+  // Restore saved theme without animation
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+    lumosBtnText.textContent = 'Nox';
+    lumosBtnIcon.className = 'fas fa-hat-wizard';
+  }
 });

@@ -1053,6 +1053,196 @@ b {
 .reveal-group .reveal:nth-child(7) { transition-delay: 0.35s; }
 .reveal-group .reveal:nth-child(8) { transition-delay: 0.4s; }
 
+/* ===== Lumos Button ===== */
+.lumos-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.lumos-btn:hover {
+  color: #ffc107;
+  border-color: rgba(255, 193, 7, 0.4);
+  background: rgba(255, 193, 7, 0.08);
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.15);
+}
+
+.lumos-btn i {
+  font-size: 0.85rem;
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.lumos-btn:hover i {
+  transform: rotate(-15deg) scale(1.1);
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
+}
+
+/* When in light mode, style Nox button differently */
+body.light-mode .lumos-btn {
+  color: #6b4fa0;
+  border-color: rgba(107, 79, 160, 0.3);
+}
+
+body.light-mode .lumos-btn:hover {
+  color: #4a2d8a;
+  border-color: rgba(107, 79, 160, 0.5);
+  background: rgba(107, 79, 160, 0.08);
+  box-shadow: 0 0 20px rgba(107, 79, 160, 0.15);
+}
+
+/* ===== Theme Transition Overlay ===== */
+.theme-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  clip-path: circle(0% at 50% 50%);
+  transition: none;
+}
+
+.theme-transition-overlay.expanding {
+  animation: themeExpand 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.theme-transition-overlay.collapsing {
+  animation: themeCollapse 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.theme-transition-overlay.to-light {
+  background: #f5f5f7;
+}
+
+.theme-transition-overlay.to-dark {
+  background: #0a0a0b;
+}
+
+@keyframes themeExpand {
+  from {
+    clip-path: circle(0% at var(--origin-x) var(--origin-y));
+  }
+  to {
+    clip-path: circle(150% at var(--origin-x) var(--origin-y));
+  }
+}
+
+@keyframes themeCollapse {
+  from {
+    clip-path: circle(150% at var(--origin-x) var(--origin-y));
+  }
+  to {
+    clip-path: circle(0% at var(--origin-x) var(--origin-y));
+  }
+}
+
+/* ===== Light Mode Theme ===== */
+body.light-mode {
+  --bg-primary: #f5f5f7;
+  --bg-secondary: #eaeaed;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8f8fa;
+  --accent: #3a7bd5;
+  --accent-light: #5a9be6;
+  --accent-dark: #2a5fb0;
+  --accent-glow: rgba(58, 123, 213, 0.1);
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --text-muted: #7a7a96;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode ::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+body.light-mode strong,
+body.light-mode b {
+  color: var(--text-primary);
+}
+
+body.light-mode .navbar.scrolled {
+  background: rgba(245, 245, 247, 0.85);
+}
+
+body.light-mode .hero-section {
+  background: var(--bg-primary) !important;
+}
+
+body.light-mode .orb {
+  opacity: 0.1;
+}
+
+body.light-mode .hero-bg-icon {
+  color: rgba(0, 0, 0, 0.06);
+}
+
+body.light-mode .scroll-mouse {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .nav-link:hover,
+body.light-mode .nav-link.active {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .social-icon {
+  color: var(--text-secondary);
+  border-color: var(--border);
+}
+
+body.light-mode .social-icon:hover {
+  box-shadow: 0 8px 24px rgba(58, 123, 213, 0.15);
+}
+
+body.light-mode .timeline-marker {
+  border-color: var(--bg-primary);
+}
+
+body.light-mode .section:nth-child(even) .timeline-marker {
+  border-color: var(--bg-secondary);
+}
+
+body.light-mode .project-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .cert-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .back-to-top:hover {
+  color: #fff;
+}
+
+body.light-mode .skill-icon-tile .devicon-apachekafka-original,
+body.light-mode .skill-icon-tile .devicon-github-original {
+  color: var(--text-secondary);
+}
+
+body.light-mode .skill-icon-tile:hover .devicon-apachekafka-original,
+body.light-mode .skill-icon-tile:hover .devicon-github-original {
+  color: var(--text-primary);
+}
+
+body.light-mode .nav-toggle span {
+  background: var(--text-primary);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .nav-links {
@@ -1067,6 +1257,14 @@ b {
     gap: 0.5rem;
     transform: translateX(100%);
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  body.light-mode .nav-links {
+    background: rgba(245, 245, 247, 0.98);
+  }
+
+  .lumos-btn span {
+    display: none;
   }
 
   .nav-links.active {
