@@ -903,6 +903,52 @@ b {
   text-align: center;
 }
 
+/* ===== See More Toggle ===== */
+.card-extra {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.card-extra > * {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.card-extra.open {
+  grid-template-rows: 1fr;
+}
+
+.see-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  margin: 0.25rem 0 0.75rem;
+  transition: color var(--transition);
+}
+
+.see-more-btn i {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+.see-more-btn[aria-expanded="true"] i {
+  transform: rotate(180deg);
+}
+
+.see-more-btn:hover {
+  color: var(--accent-light);
+}
+
 /* ===== Certifications ===== */
 .certifications-grid {
   display: grid;

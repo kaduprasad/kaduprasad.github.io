@@ -67,6 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // ===== See More / See Less on Project Cards =====
+  document.querySelectorAll('.see-more-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const extra = btn.previousElementSibling;
+      const isOpen = extra.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+      btn.querySelector('span').textContent = isOpen ? 'See less' : 'See more';
+    });
+  });
+
   // ===== Lumos / Nox — Light/Dark Mode Toggle =====
   const lumosBtn = document.getElementById('lumosBtn');
   const themeOverlay = document.getElementById('themeOverlay');
