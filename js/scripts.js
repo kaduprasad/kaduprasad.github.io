@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ===== Project Card Mouse Spotlight =====
-  document.querySelectorAll('.project-card').forEach((card) => {
+  document.querySelectorAll('.project-card, .skill-category').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
