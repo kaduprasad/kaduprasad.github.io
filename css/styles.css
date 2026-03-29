@@ -932,13 +932,16 @@ b {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.05));
+  background: rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.25rem;
   font-size: 1.5rem;
-  color: #ffc107;
+}
+
+.cert-icon.microsoft-icon {
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .cert-card h3 {
@@ -951,6 +954,28 @@ b {
 .cert-card p {
   font-size: 0.9rem;
   color: var(--text-muted);
+}
+
+.cert-link-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--accent);
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity var(--transition), transform var(--transition);
+}
+
+.cert-link-hint i {
+  font-size: 0.7rem;
+}
+
+.cert-card:hover .cert-link-hint {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ===== Interests ===== */
