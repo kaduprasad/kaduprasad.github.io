@@ -525,23 +525,40 @@
     <section id="interests" class="section">
       <div class="container">
         <h2 class="section-title reveal">Interests</h2>
-        <div class="interests-content reveal">
-          <ul class="interests-list">
-            <li><i class="fas fa-hiking"></i> Apart from coding, I enjoy outdoor activities such as <b>hiking and
-                badminton</b></li>
-            <li><i class="fas fa-mountain"></i> I have hiked over 35+ forts in Maharashtra.</li>
-            <li><i class="fas fa-motorcycle"></i> Riding is one of the new hobbies that I have developed, farthest I
-              have travelled with my bike is around 400kms.</li>
-            <li><i class="fas fa-map-marked-alt"></i> I also actively take part in reviewing locations and places on
-              Google Maps, and I have over 200+ contributions and reviews.</li>
-            <li><i class="fas fa-book-reader"></i> I also love <strong>reading technology blogs</strong> and staying
-              updated with new advancements in <strong>AI and cloud computing</strong></li>
-          </ul>
-          <div class="map-container reveal">
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F"
-              width="100%" height="450" loading="lazy"></iframe>
+        <div class="interests-top reveal">
+          <div class="interests-text">
+            <ul class="interests-list">
+              <li><i class="fas fa-hiking"></i> <span>Apart from coding, I enjoy outdoor activities such as <b>hiking and badminton</b></span></li>
+              <li><i class="fas fa-mountain"></i> <span>I have hiked over 35+ forts in Maharashtra.</span></li>
+              <li><i class="fas fa-motorcycle"></i> <span>Riding is one of the new hobbies that I have developed, farthest I have travelled with my bike is around 400kms.</span></li>
+              <li><i class="fas fa-map-marked-alt"></i> <span>I also actively take part in reviewing locations and places on Google Maps, and I have over 200+ contributions and reviews.</span></li>
+              <li><i class="fas fa-book-reader"></i> <span>I also love <strong>reading technology blogs</strong> and staying updated with new advancements in <strong>AI and cloud computing</strong></span></li>
+            </ul>
           </div>
+          <div class="interests-slider reveal">
+            <div class="slider-track" id="sliderTrack">
+              <div class="slide">
+                <img src="./assets/img/IMG_20251004_130822.jpg" alt="Fort hiking in Maharashtra" />
+                <div class="slide-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</div>
+              </div>
+              <div class="slide">
+                <img src="./assets/img/IMG_20251005_100613.jpg" alt="Fort hiking in Maharashtra" />
+                <div class="slide-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</div>
+              </div>
+              <div class="slide">
+                <img src="./assets/img/IMG_20250104_180236.jpg" alt="Bike riding" />
+                <div class="slide-caption"><i class="fas fa-motorcycle"></i> Long Ride</div>
+              </div>
+            </div>
+            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn slider-next" id="sliderNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+            <div class="slider-dots" id="sliderDots"></div>
+          </div>
+        </div>
+        <div class="map-container reveal">
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F"
+            width="100%" height="450" loading="lazy"></iframe>
         </div>
       </div>
     </section>

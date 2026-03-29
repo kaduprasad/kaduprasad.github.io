@@ -67,6 +67,37 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // ===== Interests Photo Slider =====
+  const track = document.getElementById('sliderTrack');
+  const slides = track ? track.querySelectorAll('.slide') : [];
+  const dotsContainer = document.getElementById('sliderDots');
+  let current = 0;
+
+  if (track && slides.length) {
+    // Build dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(dot);
+    });
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dotsContainer.querySelectorAll('.slider-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    document.getElementById('sliderPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('sliderNext').addEventListener('click', () => goTo(current + 1));
+
+    // Auto-advance every 4s
+    setInterval(() => goTo(current + 1), 4000);
+  }
+
   // ===== Project Card Mouse Spotlight =====
   document.querySelectorAll('.project-card, .skill-category').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
