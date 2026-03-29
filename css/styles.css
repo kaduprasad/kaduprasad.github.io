@@ -534,8 +534,10 @@ b {
 }
 
 .timeline-content {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(22, 22, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2rem;
   transition: all var(--transition);
@@ -632,13 +634,36 @@ b {
 }
 
 .project-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2rem;
-  transition: all var(--transition);
+  transition: all var(--transition), border-color 0.15s ease, box-shadow 0.15s ease;
   position: relative;
   overflow: hidden;
+}
+
+/* Mouse spotlight overlay */
+.project-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(74, 144, 232, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::after {
+  opacity: 1;
 }
 
 .project-card::before {
@@ -654,9 +679,10 @@ b {
 }
 
 .project-card:hover {
-  border-color: var(--border-hover);
+  border-color: rgba(74, 144, 232, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  background: rgba(74, 144, 232, 0.06);
+  box-shadow: 0 20px 60px rgba(74, 144, 232, 0.15), 0 0 0 1px rgba(74, 144, 232, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .project-card:hover::before {
@@ -801,8 +827,10 @@ b {
   justify-content: center;
   margin-bottom: 3rem;
   padding: 2rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(22, 22, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 20px;
 }
 
@@ -876,8 +904,10 @@ b {
 }
 
 .skill-category {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(22, 22, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 1.5rem;
   transition: all var(--transition);
@@ -957,8 +987,10 @@ b {
 }
 
 .cert-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(22, 22, 26, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 2rem;
   text-align: center;
@@ -1125,13 +1157,35 @@ b {
 .reveal-group .reveal:nth-child(8) { transition-delay: 0.4s; }
 
 /* ===== Lumos Button ===== */
+@keyframes lumosGlow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 193, 7, 0.4), 0 0 20px rgba(255, 193, 7, 0.2), 0 0 40px rgba(255, 193, 7, 0.08);
+    border-color: rgba(255, 193, 7, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 193, 7, 0.7), 0 0 40px rgba(255, 193, 7, 0.35), 0 0 70px rgba(255, 193, 7, 0.15);
+    border-color: rgba(255, 193, 7, 0.9);
+  }
+}
+
+@keyframes lumosGlowNox {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(107, 79, 160, 0.4), 0 0 20px rgba(107, 79, 160, 0.2), 0 0 40px rgba(107, 79, 160, 0.08);
+    border-color: rgba(107, 79, 160, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(107, 79, 160, 0.7), 0 0 40px rgba(107, 79, 160, 0.35), 0 0 70px rgba(107, 79, 160, 0.15);
+    border-color: rgba(107, 79, 160, 0.9);
+  }
+}
+
 .lumos-btn {
   display: flex;
   align-items: center;
   gap: 0.4rem;
   background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-muted);
+  border: 1px solid rgba(255, 193, 7, 0.5);
+  color: #ffc107;
   font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 600;
@@ -1139,40 +1193,35 @@ b {
   padding: 0.45rem 1rem;
   border-radius: 100px;
   cursor: pointer;
-  transition: all var(--transition);
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
+  animation: lumosGlow 2.5s ease-in-out infinite;
+  transition: background var(--transition), transform var(--transition);
 }
 
 .lumos-btn:hover {
-  color: #ffc107;
-  border-color: rgba(255, 193, 7, 0.4);
-  background: rgba(255, 193, 7, 0.08);
-  box-shadow: 0 0 20px rgba(255, 193, 7, 0.15);
+  background: rgba(255, 193, 7, 0.1);
+  transform: scale(1.05);
 }
 
 .lumos-btn i {
   font-size: 0.85rem;
-  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .lumos-btn:hover i {
   transform: rotate(-15deg) scale(1.1);
-  text-shadow: 0 0 8px rgba(255, 193, 7, 0.6);
 }
 
 /* When in light mode, style Nox button differently */
 body.light-mode .lumos-btn {
   color: #6b4fa0;
-  border-color: rgba(107, 79, 160, 0.3);
+  animation: lumosGlowNox 2.5s ease-in-out infinite;
 }
 
 body.light-mode .lumos-btn:hover {
-  color: #4a2d8a;
-  border-color: rgba(107, 79, 160, 0.5);
   background: rgba(107, 79, 160, 0.08);
-  box-shadow: 0 0 20px rgba(107, 79, 160, 0.15);
 }
 
 /* ===== Theme Transition Overlay ===== */
@@ -1308,6 +1357,26 @@ body.light-mode .skill-icon-tile .devicon-github-original {
 body.light-mode .skill-icon-tile:hover .devicon-apachekafka-original,
 body.light-mode .skill-icon-tile:hover .devicon-github-original {
   color: var(--text-primary);
+}
+
+body.light-mode .timeline-content,
+body.light-mode .skills-showcase,
+body.light-mode .skill-category,
+body.light-mode .cert-card {
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .project-card {
+  background: rgba(255, 255, 255, 0.55);
+  border-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .project-card:hover {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.95);
 }
 
 body.light-mode .nav-toggle span {

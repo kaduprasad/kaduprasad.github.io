@@ -67,6 +67,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
+  // ===== Project Card Mouse Spotlight =====
+  document.querySelectorAll('.project-card').forEach((card) => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
+      card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+    });
+  });
+
   // ===== See More / See Less on Project Cards =====
   document.querySelectorAll('.see-more-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
