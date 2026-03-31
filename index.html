@@ -28,8 +28,8 @@
         <a href="#education" class="nav-link">Education</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#interests" class="nav-link">Interests &amp; Achievements</a>
         <a href="#certifications" class="nav-link">Certifications</a>
-        <a href="#interests" class="nav-link">Interests</a>
       </div>
       <button class="lumos-btn" id="lumosBtn" aria-label="Toggle light mode">
         <i class="fas fa-magic"></i> <span>Lumos</span>
@@ -256,79 +256,76 @@
         <h3 class="subsection-title reveal">Enterprise Projects</h3>
         <div class="projects-grid">
           <div class="project-card reveal">
-            <div class="project-icon"><i class="fas fa-tractor"></i></div>
-            <h3>Extended Services &amp; Warranty Management Platform</h3>
-            <ul>
-              <li>Contributed to an enterprise-scale <strong>admin tool</strong> enabling internal teams to create, configure, and publish extended service packages for heavy equipment and vehicles across multiple product divisions.</li>
-              <li>Developed a <strong>dealer-facing web application</strong> allowing authorized dealers to browse available service packages, generate customer quotations, and create purchase contracts.</li>
-            </ul>
-            <div class="card-extra">
-              <ul>
-                <li>Built backend microservices using <strong>Java Spring Boot</strong> along with <strong>Python FastAPI</strong> and <strong>OpenSearch</strong> for fast and scalable search functionality.</li>
-                <li>Developed the frontend using <strong>React.js with Redux</strong> for state management across both the admin and dealer-facing applications.</li>
-              </ul>
+            <div class="card-header">
+              <div class="project-icon"><i class="fas fa-tractor"></i></div>
+              <h3>Extended Services &amp; Warranty Management Platform</h3>
+              <button class="card-toggle" aria-expanded="false" aria-label="Expand project"><i class="fas fa-chevron-down"></i></button>
             </div>
-            <button class="see-more-btn" aria-expanded="false"><span>See more</span> <i class="fas fa-chevron-down"></i></button>
+            <div class="card-body">
+              <div>
+                <ul>
+                  <li>Contributed to an enterprise-scale <strong>admin tool</strong> enabling internal teams to create, configure, and publish extended service packages for heavy equipment and vehicles across multiple product divisions.</li>
+                  <li>Developed a <strong>dealer-facing web application</strong> allowing authorized dealers to browse available service packages, generate customer quotations, and create purchase contracts.</li>
+                  <li>Built backend microservices using <strong>Java Spring Boot</strong> along with <strong>Python FastAPI</strong> and <strong>OpenSearch</strong> for fast and scalable search functionality.</li>
+                  <li>Developed the frontend using <strong>React.js with Redux</strong> for state management across both the admin and dealer-facing applications.</li>
+                </ul>
+              </div>
+            </div>
             <div class="tech-tags">
-              <span>Java Spring Boot</span><span>Python FastAPI</span><span>OpenSearch</span><span>React.js</span><span>Redux</span><span>PostgreSQL</span>
+              <span><i class="devicon-spring-plain colored"></i>Java Spring Boot</span><span><i class="devicon-python-plain colored"></i>Python FastAPI</span><span><i class="fas fa-search"></i>OpenSearch</span><span><i class="devicon-react-original colored"></i>React.js</span><span><i class="devicon-redux-original colored"></i>Redux</span><span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
             </div>
           </div>
 
           <div class="project-card reveal">
-            <div class="project-icon"><i class="fas fa-history"></i></div>
-            <h3>Order Auditing: Real-Time Order History &amp; Tracking</h3>
-            <ul>
-              <li>Implemented an audit tab to maintain a comprehensive history of order actions, including stop
-                additions/removals and order updates.</li>
-              <li>Developed backend functionality using <strong>Java Spring Boot</strong> with PostgreSQL, handling
-                around 1 million records.</li>
-            </ul>
-            <div class="card-extra">
-              <ul>
-                <li>Integrated <strong>Kafka consumers</strong> to listen to 15+ event topics for real-time tracking and
-                  logging.</li>
-                <li>Optimized performance with <strong>Redis caching</strong>, reducing database calls and improving
-                  efficiency.</li>
-              </ul>
+            <div class="card-header">
+              <div class="project-icon"><i class="fas fa-history"></i></div>
+              <h3>Order Auditing: Real-Time Order History &amp; Tracking</h3>
+              <button class="card-toggle" aria-expanded="false" aria-label="Expand project"><i class="fas fa-chevron-down"></i></button>
             </div>
-            <button class="see-more-btn" aria-expanded="false"><span>See more</span> <i class="fas fa-chevron-down"></i></button>
-            <p><strong>Key Features:</strong></p>
-            <ul class="features-list">
-              <li><strong>Real-time audit trail:</strong> Leveraged Kafka consumers to track and display order actions in
-                real-time.</li>
-              <li><strong>Comprehensive order lifecycle tracking:</strong> Maintained a complete history of order
-                modifications.</li>
-            </ul>
+            <div class="card-body">
+              <div>
+                <ul>
+                  <li>Implemented an audit tab to maintain a comprehensive history of order actions, including stop additions/removals and order updates.</li>
+                  <li>Developed backend functionality using <strong>Java Spring Boot</strong> with PostgreSQL, handling around 1 million records.</li>
+                  <li>Integrated <strong>Kafka consumers</strong> to listen to 15+ event topics for real-time tracking and logging.</li>
+                  <li>Optimized performance with <strong>Redis caching</strong>, reducing database calls and improving efficiency.</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul class="features-list">
+                  <li><strong>Real-time audit trail:</strong> Leveraged Kafka consumers to track and display order actions in real-time.</li>
+                  <li><strong>Comprehensive order lifecycle tracking:</strong> Maintained a complete history of order modifications.</li>
+                </ul>
+              </div>
+            </div>
             <div class="tech-tags">
-              <span>Java Spring Boot</span><span>Kafka</span><span>GraphQL</span><span>React.js</span><span>Redis</span><span>PostgreSQL</span>
+              <span><i class="devicon-spring-plain colored"></i>Java Spring Boot</span><span><i class="devicon-apachekafka-original colored"></i>Kafka</span><span><i class="devicon-graphql-plain colored"></i>GraphQL</span><span><i class="devicon-react-original colored"></i>React.js</span><span><i class="devicon-redis-plain colored"></i>Redis</span><span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
             </div>
           </div>
 
           <div class="project-card reveal">
-            <div class="project-icon"><i class="fas fa-calendar-alt"></i></div>
-            <h3>Order Scheduling</h3>
-            <ul>
-              <li>Developed a scheduling order page with a search filter and dynamic table displaying relevant order
-                details.</li>
-              <li>Built the backend using <strong>Node.js (Nest.js framework)</strong> to handle SQL queries and GraphQL
-                responses.</li>
-            </ul>
-            <div class="card-extra">
-              <ul>
-                <li>Designed the frontend with <strong>React.js</strong> for an intuitive and seamless user experience.</li>
-                <li>Optimized database queries and indexing, improving query performance and response time.</li>
-              </ul>
+            <div class="card-header">
+              <div class="project-icon"><i class="fas fa-calendar-alt"></i></div>
+              <h3>Order Scheduling</h3>
+              <button class="card-toggle" aria-expanded="false" aria-label="Expand project"><i class="fas fa-chevron-down"></i></button>
             </div>
-            <button class="see-more-btn" aria-expanded="false"><span>See more</span> <i class="fas fa-chevron-down"></i></button>
-            <p><strong>Key Features:</strong></p>
-            <ul class="features-list">
-              <li><strong>Default filters:</strong> Implemented predefined filters for streamlined search.</li>
-              <li><strong>Optimized query performance:</strong> Enhanced speed with optimized SQL queries and indexes.
-              </li>
-              <li><strong>Multiselect chip filters:</strong> Enabled users to filter search results efficiently.</li>
-            </ul>
+            <div class="card-body">
+              <div>
+                <ul>
+                  <li>Developed a scheduling order page with a search filter and dynamic table displaying relevant order details.</li>
+                  <li>Built the backend using <strong>Node.js (Nest.js framework)</strong> to handle SQL queries and GraphQL responses.</li>
+                  <li>Designed the frontend with <strong>React.js</strong> for an intuitive and seamless user experience.</li>
+                  <li>Optimized database queries and indexing, improving query performance and response time.</li>
+                </ul>
+                <p><strong>Key Features:</strong></p>
+                <ul class="features-list">
+                  <li><strong>Default filters:</strong> Implemented predefined filters for streamlined search.</li>
+                  <li><strong>Optimized query performance:</strong> Enhanced speed with optimized SQL queries and indexes.</li>
+                  <li><strong>Multiselect chip filters:</strong> Enabled users to filter search results efficiently.</li>
+                </ul>
+              </div>
+            </div>
             <div class="tech-tags">
-              <span>TypeScript</span><span>Nest.js</span><span>React.js</span><span>PostgreSQL</span><span>GraphQL</span>
+              <span><i class="devicon-typescript-plain colored"></i>TypeScript</span><span><i class="devicon-nestjs-plain colored"></i>Nest.js</span><span><i class="devicon-react-original colored"></i>React.js</span><span><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span><i class="devicon-graphql-plain colored"></i>GraphQL</span>
             </div>
           </div>
         </div>
@@ -336,31 +333,38 @@
         <h3 class="subsection-title reveal">College Projects</h3>
         <div class="projects-grid">
           <div class="project-card reveal">
-            <div class="project-icon"><i class="fas fa-brain"></i></div>
-            <h3>Brain Tumor Detection using CNNs</h3>
+            <div class="card-header">
+              <div class="project-icon"><i class="fas fa-brain"></i></div>
+              <h3>Brain Tumor Detection using CNNs</h3>
+              <button class="card-toggle" aria-expanded="false" aria-label="Expand project"><i class="fas fa-chevron-down"></i></button>
+            </div>
             <p class="project-subtitle">Django · Convolutional Neural Networks · VGG 16</p>
-            <p>Created a web application where user can upload an image and the application will generate a report,
-              whether the uploaded image is tumorous or not. User can also send diagnosed report as email to respective
-              user/doctor. Also user can see the location of nearest hospital using this application using opensource
-              javascript map api.</p>
-            <div class="project-meta">
-              <span class="timeline-date">June 2020 — March 2021</span>
-              <a href="https://github.com/kaduprasad/djangoFinalProject" class="project-link"><i
-                  class="fab fa-github"></i> View Code</a>
+            <div class="card-body">
+              <div>
+                <p>Created a web application where user can upload an image and the application will generate a report, whether the uploaded image is tumorous or not. User can also send diagnosed report as email to respective user/doctor. Also user can see the location of nearest hospital using this application using opensource javascript map api.</p>
+                <div class="project-meta">
+                  <span class="timeline-date">June 2020 — March 2021</span>
+                  <a href="https://github.com/kaduprasad/djangoFinalProject" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="project-card reveal">
-            <div class="project-icon"><i class="fas fa-user-check"></i></div>
-            <h3>Real Time Face Recognition Software</h3>
+            <div class="card-header">
+              <div class="project-icon"><i class="fas fa-user-check"></i></div>
+              <h3>Real Time Face Recognition Software</h3>
+              <button class="card-toggle" aria-expanded="false" aria-label="Expand project"><i class="fas fa-chevron-down"></i></button>
+            </div>
             <p class="project-subtitle">Python · Tkinter · OpenCV</p>
-            <p>Developed software could recognize faces detected by the webcam of a laptop. Used Open CV algorithm which
-              tried to match the facial features with the data set images. The software could also count the number of
-              faces in an image along with their names.</p>
-            <div class="project-meta">
-              <span class="timeline-date">January 2020 — March 2020</span>
-              <a href="https://github.com/kaduprasad/Face-recognition-system" class="project-link"><i
-                  class="fab fa-github"></i> View Code</a>
+            <div class="card-body">
+              <div>
+                <p>Developed software could recognize faces detected by the webcam of a laptop. Used Open CV algorithm which tried to match the facial features with the data set images. The software could also count the number of faces in an image along with their names.</p>
+                <div class="project-meta">
+                  <span class="timeline-date">January 2020 — March 2020</span>
+                  <a href="https://github.com/kaduprasad/Face-recognition-system" class="project-link"><i class="fab fa-github"></i> View Code</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -484,10 +488,136 @@
       </div>
     </section>
 
+    <!-- Interests & Achievements -->
+    <section id="interests" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Interests &amp; Achievements</h2>
+        <p class="interests-intro reveal">Beyond the code, I explore forts, ride long distances, play badminton, geek out over Harry Potter, and share tech knowledge online.</p>
+
+        <!-- Trekking & Biking -->
+        <div class="interest-subsection reveal">
+          <h3 class="interest-sub-title"><i class="fas fa-mountain"></i> Trekking &amp; Biking</h3>
+          <p class="interest-sub-desc">Hiked <strong>35+ forts</strong> across Maharashtra — from Sinhagad to remote coastal forts. My bike has taken me on solo rides of <strong>400+ km</strong>. Also actively contribute to Google Maps with <strong>200+ reviews and contributions</strong>.</p>
+          <div class="photo-grid">
+            <div class="photo-grid-item">
+              <img src="./assets/img/IMG_20251004_130822.jpg" alt="Fort Trekking Maharashtra" loading="lazy" />
+              <span class="photo-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</span>
+            </div>
+            <div class="photo-grid-item">
+              <img src="./assets/img/IMG_20251005_100613.jpg" alt="Fort Trekking Maharashtra Coastal" loading="lazy" />
+              <span class="photo-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</span>
+            </div>
+            <div class="photo-grid-item">
+              <img src="./assets/img/IMG_20251003_102149.jpg" alt="Mountain view with clouds, Maharashtra" loading="lazy" />
+              <span class="photo-caption"><i class="fas fa-cloud"></i> Mountain View, Maharashtra</span>
+            </div>
+            <div class="photo-grid-item">
+              <img src="./assets/img/IMG_20250104_180236.jpg" alt="Bike long ride" loading="lazy" />
+              <span class="photo-caption"><i class="fas fa-motorcycle"></i> Long Ride</span>
+            </div>
+          </div>
+          <div class="map-container reveal" style="margin-top:2rem;">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F" width="100%" height="450" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Technologies & YouTube -->
+        <div class="interest-subsection reveal">
+          <h3 class="interest-sub-title"><i class="fab fa-youtube"></i> Technologies &amp; YouTube</h3>
+          <div class="yt-two-col">
+            <!-- Thumbnail card -->
+            <a class="yt-thumb-card" href="https://www.youtube.com/watch?v=Kbr5FTnkis4" target="_blank" rel="noopener noreferrer" aria-label="Watch on YouTube">
+              <div class="yt-thumb-wrap">
+                <img src="https://img.youtube.com/vi/Kbr5FTnkis4/maxresdefault.jpg" alt="YouTube video thumbnail" loading="lazy" />
+                <div class="yt-play-overlay">
+                  <div class="yt-play-btn"><i class="fab fa-youtube"></i></div>
+                </div>
+                <div class="yt-thumb-badge"><i class="fas fa-eye"></i> 96K+ views</div>
+              </div>
+            </a>
+            <!-- Text + channel card -->
+            <div class="yt-text-col">
+              <p class="interest-sub-desc" style="margin-bottom:1.25rem;">I love reading technology blogs and staying updated with new advancements in <strong>AI and cloud computing</strong>. I also run a YouTube channel where I share tech tutorials and deep-dives into the tools and concepts I work with every day.</p>
+              <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem;">One of my videos has crossed <strong style="color:var(--accent);">96,000+ views</strong> &mdash; covering a topic that resonates with developers worldwide.</p>
+              <a href="https://www.youtube.com/@prasadkadu9737" class="yt-channel-card" target="_blank" rel="noopener noreferrer">
+                <div class="yt-channel-icon"><i class="fab fa-youtube"></i></div>
+                <div>
+                  <p class="yt-channel-name">@prasadkadu9737</p>
+                  <p class="yt-channel-desc">Tech tutorials &middot; Deep-dives &middot; Developer tips</p>
+                </div>
+                <i class="fas fa-external-link-alt yt-ext-icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harry Potter -->
+        <div class="interest-subsection hp-subsection reveal">
+          <div class="hp-candles-wrap" aria-hidden="true">
+            <div class="candle" style="right:3%;top:62%;animation-delay:0.6s;animation-duration:8s;"><div class="flame"></div><div class="candle-body"></div><div class="candle-drip"></div></div>
+            <div class="candle" style="right:14%;top:80%;animation-delay:1.8s;animation-duration:7.5s;"><div class="flame"></div><div class="candle-body"></div><div class="candle-drip"></div></div>
+            <div class="candle" style="right:8%;top:72%;animation-delay:3.0s;animation-duration:6.5s;"><div class="flame"></div><div class="candle-body"></div><div class="candle-drip"></div></div>
+          </div>
+          <div class="interest-sub-content">
+            <h3 class="interest-sub-title"><i class="fas fa-hat-wizard"></i> Harry Potter</h3>
+            <p>I am a massive Harry Potter fan — the wizarding world has always captured my imagination since childhood. The intricate lore, the spells, the friendships — it&apos;s storytelling at its finest.</p>
+            <p style="margin-top:0.75rem;">There&apos;s something deeply satisfying about how magic in the Harry Potter universe has rules, limitations, and elegance — not unlike good software architecture. Both reward curiosity and reward effort.</p>
+          </div>
+        </div>
+
+        <!-- Badminton -->
+        <div class="interest-subsection reveal">
+          <div class="badminton-layout">
+            <!-- Left: text + trophy info -->
+            <div class="badminton-text">
+              <h3 class="interest-sub-title badminton-inline-title"><span class="badminton-icon">🏸</span> Badminton</h3>
+              <p class="interest-sub-desc">Competitive badminton player with a passion for the game. Won the <strong>Men's Singles title</strong> at the <strong>Yash Badminton Open 2025</strong> &mdash; the quick reflexes and tactical thinking on the court translate surprisingly well to debugging sessions.</p>
+              <div class="badminton-stat-list">
+                <div class="badminton-stat">
+                  <i class="fas fa-trophy"></i>
+                  <div>
+                    <p class="bstat-label">Tournament Win</p>
+                    <p class="bstat-value">Yash Badminton Open 2025</p>
+                  </div>
+                </div>
+                <div class="badminton-stat">
+                  <i class="fas fa-medal"></i>
+                  <div>
+                    <p class="bstat-label">Category</p>
+                    <p class="bstat-value">Men's Singles</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: hover-cycle image viewer -->
+            <div class="badminton-viewer">
+              <div class="badminton-main-img" id="badmintonMain">
+                <img src="./assets/img/badminton-1.jpg" alt="Yash Badminton Open 2025 Trophy" />
+                <div class="badminton-main-caption" id="badmintonCaption">Men's Singles Winner Trophy</div>
+              </div>
+              <div class="badminton-thumbs">
+                <div class="badminton-thumb active" data-src="./assets/img/badminton-1.jpg" data-caption="Men's Singles Winner Trophy">
+                  <img src="./assets/img/badminton-1.jpg" alt="Trophy" loading="lazy" />
+                </div>
+                <div class="badminton-thumb" data-src="./assets/img/badminton-2.jpg" data-caption="Winner with Trophy &amp; Certificate">
+                  <img src="./assets/img/badminton-2.jpg" alt="Winner" loading="lazy" />
+                </div>
+                <div class="badminton-thumb" data-src="./assets/img/badminton-3.jpg" data-caption="Trophy Presentation Ceremony">
+                  <img src="./assets/img/badminton-3.jpg" alt="Ceremony" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- Certifications -->
     <section id="certifications" class="section">
       <div class="container">
-        <h2 class="section-title reveal">Awards &amp; Certifications</h2>
+        <h2 class="section-title reveal">Certifications</h2>
         <div class="certifications-grid">
           <a href="https://www.youracclaim.com/badges/15061fd0-1a20-4621-9850-451f6a45222b?source=linked_in_profile"
             class="cert-card reveal">
@@ -517,48 +647,6 @@
             <p>Microsoft Certification</p>
             <span class="cert-link-hint"><i class="fas fa-external-link-alt"></i> View Badge</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interests -->
-    <section id="interests" class="section">
-      <div class="container">
-        <h2 class="section-title reveal">Interests</h2>
-        <div class="interests-top reveal">
-          <div class="interests-text">
-            <ul class="interests-list">
-              <li><i class="fas fa-hiking"></i> <span>Apart from coding, I enjoy outdoor activities such as <b>hiking and badminton</b></span></li>
-              <li><i class="fas fa-mountain"></i> <span>I have hiked over 35+ forts in Maharashtra.</span></li>
-              <li><i class="fas fa-motorcycle"></i> <span>Riding is one of the new hobbies that I have developed, farthest I have travelled with my bike is around 400kms.</span></li>
-              <li><i class="fas fa-map-marked-alt"></i> <span>I also actively take part in reviewing locations and places on Google Maps, and I have over 200+ contributions and reviews.</span></li>
-              <li><i class="fas fa-book-reader"></i> <span>I also love <strong>reading technology blogs</strong> and staying updated with new advancements in <strong>AI and cloud computing</strong></span></li>
-            </ul>
-          </div>
-          <div class="interests-slider reveal">
-            <div class="slider-track" id="sliderTrack">
-              <div class="slide">
-                <img src="./assets/img/IMG_20251004_130822.jpg" alt="Fort hiking in Maharashtra" />
-                <div class="slide-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</div>
-              </div>
-              <div class="slide">
-                <img src="./assets/img/IMG_20251005_100613.jpg" alt="Fort hiking in Maharashtra" />
-                <div class="slide-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</div>
-              </div>
-              <div class="slide">
-                <img src="./assets/img/IMG_20250104_180236.jpg" alt="Bike riding" />
-                <div class="slide-caption"><i class="fas fa-motorcycle"></i> Long Ride</div>
-              </div>
-            </div>
-            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider-btn slider-next" id="sliderNext" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
-            <div class="slider-dots" id="sliderDots"></div>
-          </div>
-        </div>
-        <div class="map-container reveal">
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F"
-            width="100%" height="450" loading="lazy"></iframe>
         </div>
       </div>
     </section>

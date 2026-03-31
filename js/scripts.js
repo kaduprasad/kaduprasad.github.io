@@ -99,11 +99,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ===== Project Card Mouse Spotlight =====
-  document.querySelectorAll('.project-card, .skill-category').forEach((card) => {
+  document.querySelectorAll('.project-card, .skill-category, .timeline-content, .cert-card').forEach((card) => {
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
       card.style.setProperty('--mouse-y', (e.clientY - rect.top) + 'px');
+    });
+  });
+
+  // ===== Collapsible Project Cards =====
+  document.querySelectorAll('.card-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.project-card');
+      const body = card.querySelector('.card-body');
+      if (!body) return;
+      const isOpen = body.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
     });
   });
 
@@ -184,4 +195,91 @@ document.addEventListener('DOMContentLoaded', () => {
     lumosBtnText.textContent = 'Nox';
     lumosBtnIcon.className = 'fas fa-hat-wizard';
   }
+
+  // ===== Harry Potter: Magic Cursor Sparkle Trail (interests section only) =====
+  const sparkleChars = ['✦', '✧', '★', '·', '✴', '⋆', '✺'];
+  const sparkleColors = ['#ffd700', '#ffc107', '#4a90e8', '#7ab4f5', '#ffffff', '#ffecb3'];
+  let lastSparkleTime = 0;
+  const interestsSection = document.getElementById('interests');
+
+  document.addEventListener('mousemove', (e) => {
+    if (!interestsSection) return;
+    const rect = interestsSection.getBoundingClientRect();
+    const inInterests = e.clientY >= rect.top && e.clientY <= rect.bottom &&
+                        e.clientX >= rect.left && e.clientX <= rect.right;
+    if (!inInterests) return;
+
+    const now = Date.now();
+    if (now - lastSparkleTime < 35) return;
+    lastSparkleTime = now;
+
+    const p = document.createElement('span');
+    p.className = 'magic-particle';
+    const color = sparkleColors[Math.floor(Math.random() * sparkleColors.length)];
+    const char  = sparkleChars[Math.floor(Math.random() * sparkleChars.length)];
+    const size  = Math.random() * 14 + 8;
+    const dx    = (Math.random() - 0.5) * 50;
+    const dy    = -(Math.random() * 55 + 15);
+
+    p.textContent = char;
+    p.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;color:${color};font-size:${size}px;`;
+    document.body.appendChild(p);
+
+    p.animate(
+      [
+        { transform: 'translate(-50%,-50%) scale(1) rotate(0deg)',   opacity: 1 },
+        { transform: `translate(calc(-50% + ${dx}px), calc(-50% + ${dy}px)) scale(0.2) rotate(${Math.random() > 0.5 ? 120 : -120}deg)`, opacity: 0 }
+      ],
+      { duration: 500 + Math.random() * 350, easing: 'ease-out' }
+    ).onfinish = () => p.remove();
+  });
+
+  // ===== Harry Potter: Spell Cast on Click (HP section only) =====
+  const spells = ['Lumos!', 'Accio!', 'Alohomora!', 'Wingardium!', 'Expecto!', 'Nox!', 'Riddikulus!', 'Reparo!'];
+  const hpSection = document.querySelector('.hp-subsection');
+
+  document.addEventListener('click', (e) => {
+    if (!hpSection) return;
+    const rect = hpSection.getBoundingClientRect();
+    const inHP = e.clientX >= rect.left && e.clientX <= rect.right &&
+                 e.clientY >= rect.top  && e.clientY <= rect.bottom;
+    if (!inHP) return;
+
+    const ripple = document.createElement('div');
+    ripple.className = 'spell-ripple';
+    ripple.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;`;
+
+    const txt = document.createElement('span');
+    txt.className = 'spell-text';
+    txt.textContent = spells[Math.floor(Math.random() * spells.length)];
+    txt.style.cssText = `left:${e.clientX}px;top:${e.clientY - 18}px;`;
+
+    document.body.appendChild(ripple);
+    document.body.appendChild(txt);
+    setTimeout(() => ripple.remove(), 600);
+    setTimeout(() => txt.remove(), 800);
+  });
+
+  // Badminton thumbnail hover/click switching
+  const mainImg = document.getElementById('badmintonMain');
+  const caption = document.getElementById('badmintonCaption');
+  if (mainImg) {
+    const imgEl = mainImg.querySelector('img');
+    const thumbs = document.querySelectorAll('.badminton-thumb');
+    thumbs.forEach(thumb => {
+      const activate = () => {
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        imgEl.style.opacity = '0';
+        setTimeout(() => {
+          imgEl.src = thumb.dataset.src;
+          imgEl.style.opacity = '1';
+        }, 150);
+        if (caption) caption.innerHTML = thumb.dataset.caption;
+      };
+      thumb.addEventListener('mouseenter', activate);
+      thumb.addEventListener('click', activate);
+    });
+  }
+
 });
