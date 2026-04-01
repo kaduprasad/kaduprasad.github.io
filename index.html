@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Prasad Kadu — Full Stack Developer | Java Spring Boot | React.js | GraphQL" />
+  <meta name="description" content="Prasad Kadu — Senior Full Stack Developer | Java Spring Boot | React.js | GraphQL" />
   <meta name="author" content="Prasad Kadu" />
-  <title>Prasad Kadu | Full Stack Developer</title>
+  <title>Prasad Kadu | Senior Full Stack Developer</title>
   <link rel="icon" type="image/x-icon" href="assets/img/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,7 +68,7 @@
         </div>
         <p class="hero-greeting">Hello, I'm</p>
         <h1 class="hero-name">Prasad <span class="gradient-text">Kadu</span></h1>
-        <p class="hero-title">Full Stack Developer</p>
+        <p class="hero-title">Senior Full Stack Developer</p>
         <div class="hero-contact">
           <span><i class="fas fa-map-marker-alt"></i> Pune, India</span>
           <span><i class="fas fa-envelope"></i> <a
@@ -76,13 +76,16 @@
           <span><i class="fas fa-phone"></i> 7774048434</span>
         </div>
         <p class="hero-description">
-          Full Stack Software Developer with <strong>~5 years</strong> of professional experience. Designed and
-          developed web applications across multiple APIs.
-          <strong>Proficient in Java Spring Boot, Node.js, and React</strong> with expertise in databases like
-          PostgreSQL. Additionally, I have experience with <strong>Kafka publisher-subscriber patterns, REST APIs,
-            GraphQL, and CI/CD deployment processes</strong>.
-          Skilled in development tools such as <strong>Postman, Git, and GitHub Copilot</strong>.
-          Made significant contributions to system enhancements, improving overall functionality and user experience.
+          Senior Full Stack Software Developer with <strong>~5 years</strong> of professional experience designing and
+          developing scalable web applications and integrating multiple APIs.
+          <strong>Proficient in Java Spring Boot, Node.js, and React</strong>, with strong expertise in databases such
+          as PostgreSQL. Experienced in <strong>Kafka-based publisher–subscriber architectures, REST APIs, GraphQL,
+            and CI/CD deployment pipelines</strong>. Skilled in development and collaboration tools including
+          <strong>Postman, Git, and GitHub Copilot</strong>. Proven contributor to system enhancements that improve
+          overall functionality, performance, and user experience.
+          <br><br>
+          Outside of work, I enjoy <strong>trekking, badminton, biking, photography, and exploring new places</strong>,
+          which helps me stay curious, active, and creatively inspired.
         </p>
         <div class="social-icons">
           <a class="social-icon" href="https://www.linkedin.com/in/prasad-kadu-13b579162/" aria-label="LinkedIn"><i
@@ -496,28 +499,133 @@
 
         <!-- Trekking & Biking -->
         <div class="interest-subsection reveal">
-          <h3 class="interest-sub-title"><i class="fas fa-mountain"></i> Trekking &amp; Biking</h3>
-          <p class="interest-sub-desc">Hiked <strong>35+ forts</strong> across Maharashtra — from Sinhagad to remote coastal forts. My bike has taken me on solo rides of <strong>400+ km</strong>. Also actively contribute to Google Maps with <strong>200+ reviews and contributions</strong>.</p>
-          <div class="photo-grid">
-            <div class="photo-grid-item">
-              <img src="./assets/img/IMG_20251004_130822.jpg" alt="Fort Trekking Maharashtra" loading="lazy" />
-              <span class="photo-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</span>
+          <div class="trek-layout">
+            <div class="trek-text">
+              <h3 class="interest-sub-title trek-inline-title"><i class="fas fa-mountain"></i> Trekking &amp; Biking</h3>
+              <p class="interest-sub-desc">Hiked over <strong>35+ forts</strong> across Maharashtra &mdash; from Pune to Kokan. My bike has taken me on numerous adventurous rides, with the longest one being the Kokan coastal belt ride of <strong>400+ km</strong>. I also actively contribute to Google Maps with <strong>200+ reviews and contributions</strong>.</p>
+              <div class="trek-stat-list">
+                <div class="trek-stat">
+                  <i class="fas fa-flag"></i>
+                  <div>
+                    <p class="tstat-label">Forts Explored</p>
+                    <p class="tstat-value">35+</p>
+                  </div>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-road"></i>
+                  <div>
+                    <p class="tstat-label">Longest Ride</p>
+                    <p class="tstat-value">400+ km</p>
+                  </div>
+                </div>
+                <div class="trek-stat">
+                  <i class="fas fa-map-marked-alt"></i>
+                  <div>
+                    <p class="tstat-label">Google Maps</p>
+                    <p class="tstat-value">200+ Reviews</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="photo-grid-item">
-              <img src="./assets/img/IMG_20251005_100613.jpg" alt="Fort Trekking Maharashtra Coastal" loading="lazy" />
-              <span class="photo-caption"><i class="fas fa-mountain"></i> Fort Trekking, Maharashtra</span>
-            </div>
-            <div class="photo-grid-item">
-              <img src="./assets/img/IMG_20251003_102149.jpg" alt="Mountain view with clouds, Maharashtra" loading="lazy" />
-              <span class="photo-caption"><i class="fas fa-cloud"></i> Mountain View, Maharashtra</span>
-            </div>
-            <div class="photo-grid-item">
-              <img src="./assets/img/IMG_20250104_180236.jpg" alt="Bike long ride" loading="lazy" />
-              <span class="photo-caption"><i class="fas fa-motorcycle"></i> Long Ride</span>
+            <div class="trek-viewer">
+              <div class="trek-main-img" id="trekMain">
+                <img src="./assets/img/trek/trek5.jpeg" alt="Sunset silhouette at fort summit" />
+                <div class="trek-main-caption" id="trekCaption">Sunset Silhouette at Fort Summit</div>
+                <button class="photo-view-btn trek-view-btn" data-src="./assets/img/trek/trek5.jpeg" aria-label="View full size"><i class="fas fa-eye"></i></button>
+              </div>
+              <div class="trek-thumbs">
+                <div class="trek-thumb" data-src="./assets/img/trek/trek1.jpeg" data-caption="Trekking through Sahyadri grasslands">
+                  <img src="./assets/img/trek/trek1.jpeg" alt="Sahyadri grasslands" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/trek/trek2.jpeg" data-caption="Climbing the rock face">
+                  <img src="./assets/img/trek/trek2.jpeg" alt="Rock climbing" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/trek/trek3.jpeg" data-caption="Summit view with Sahyadri range">
+                  <img src="./assets/img/trek/trek3.jpeg" alt="Summit view" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/trek/trek4.jpeg" data-caption="Fort summit with flag at dusk">
+                  <img src="./assets/img/trek/trek4.jpeg" alt="Fort flag" loading="lazy" />
+                </div>
+                <div class="trek-thumb active" data-src="./assets/img/trek/trek5.jpeg" data-caption="Sunset Silhouette at Fort Summit">
+                  <img src="./assets/img/trek/trek5.jpeg" alt="Sunset silhouette" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/trek/trek6.jpeg" data-caption="Overlooking the Sahyadri valleys">
+                  <img src="./assets/img/trek/trek6.jpeg" alt="Valley view" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/IMG_20251004_130822.jpg" data-caption="Fort Trekking, Maharashtra">
+                  <img src="./assets/img/IMG_20251004_130822.jpg" alt="Fort trek" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/IMG_20251005_100613.jpg" data-caption="Coastal Fort, Maharashtra">
+                  <img src="./assets/img/IMG_20251005_100613.jpg" alt="Coastal fort" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/IMG_20251003_102149.jpg" data-caption="Mountain View, Maharashtra">
+                  <img src="./assets/img/IMG_20251003_102149.jpg" alt="Mountain view" loading="lazy" />
+                </div>
+                <div class="trek-thumb" data-src="./assets/img/IMG_20250104_180236.jpg" data-caption="Long Ride">
+                  <img src="./assets/img/IMG_20250104_180236.jpg" alt="Long ride" loading="lazy" />
+                </div>
+              </div>
             </div>
           </div>
           <div class="map-container reveal" style="margin-top:2rem;">
             <iframe src="https://www.google.com/maps/d/embed?mid=1lPb4hCk15rYESfZ20QCMOtYIBTDlGmw&ehbc=2E312F" width="100%" height="450" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <!-- Photography -->
+        <div class="interest-subsection reveal">
+          <div class="photography-layout">
+            <div class="photography-text">
+              <h3 class="interest-sub-title photography-inline-title"><i class="fas fa-camera"></i> Photography</h3>
+              <p class="interest-sub-desc">Capturing moments through the lens is something I truly enjoy. From the rugged forts of Maharashtra to serene lakes and wildflowers along the trail, every trek gives me a chance to frame nature's beauty. Here are some of my favourite shots. I have a collection of photos of 100+ unique wild flowers.</p>
+            </div>
+            <div class="photography-viewer">
+              <div class="photography-main-img" id="photographyMain">
+                <img src="./assets/img/photography/photography5.jpeg" alt="Sahyadri Cliffs & Waterfall" />
+                <div class="photography-main-caption" id="photographyCaption">Sahyadri Cliffs &amp; Waterfall</div>
+                <button class="photo-view-btn" data-src="./assets/img/photography/photography5.jpeg" aria-label="View full size"><i class="fas fa-eye"></i></button>
+              </div>
+              <div class="photography-thumbs">
+                <div class="photography-thumb" data-src="./assets/img/photography/photography1.jpeg" data-caption="Fort Summit Silhouette">
+                  <img src="./assets/img/photography/photography1.jpeg" alt="Fort summit" loading="lazy" />
+                </div>
+                <div class="photography-thumb active" data-src="./assets/img/photography/photography5.jpeg" data-caption="Sahyadri Cliffs &amp; Waterfall">
+                  <img src="./assets/img/photography/photography5.jpeg" alt="Sahyadri cliffs" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/photography3.jpeg" data-caption="Serene Lake at Dusk">
+                  <img src="./assets/img/photography/photography3.jpeg" alt="Lake" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/photography4.jpeg" data-caption="Golden Sunset over the Sea">
+                  <img src="./assets/img/photography/photography4.jpeg" alt="Sunset" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/flower1.jpeg" data-caption="Flower &amp; Reflection at Fort">
+                  <img src="./assets/img/photography/flower1.jpeg" alt="Flower" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/flower2.jpeg" data-caption="Wild White Bloom">
+                  <img src="./assets/img/photography/flower2.jpeg" alt="Wildflower" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/flower3.jpeg" data-caption="Purple Pom-Pom Flowers">
+                  <img src="./assets/img/photography/flower3.jpeg" alt="Purple flowers" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/flower4.jpeg" data-caption="Yellow Blossom">
+                  <img src="./assets/img/photography/flower4.jpeg" alt="Yellow flower" loading="lazy" />
+                </div>
+                <div class="photography-thumb" data-src="./assets/img/photography/photography2.jpeg" data-caption="Jet Trail in Twilight Sky">
+                  <img src="./assets/img/photography/photography2.jpeg" alt="Jet trail" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Photo Lightbox Modal -->
+        <div class="photo-lightbox" id="photoLightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+          <button class="lightbox-close" id="lightboxClose" aria-label="Close photo viewer"><i class="fas fa-times"></i></button>
+          <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo"><i class="fas fa-chevron-left"></i></button>
+          <button class="lightbox-next" id="lightboxNext" aria-label="Next photo"><i class="fas fa-chevron-right"></i></button>
+          <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="Full size photo" />
+            <p class="lightbox-caption" id="lightboxCaption"></p>
           </div>
         </div>
 
@@ -537,7 +645,7 @@
             </a>
             <!-- Text + channel card -->
             <div class="yt-text-col">
-              <p class="interest-sub-desc" style="margin-bottom:1.25rem;">I love reading technology blogs and staying updated with new advancements in <strong>AI and cloud computing</strong>. I also run a YouTube channel where I share tech tutorials and deep-dives into the tools and concepts I work with every day.</p>
+              <p class="interest-sub-desc" style="margin-bottom:1.25rem;">I love reading technology blogs and staying updated with new advancements in <strong>AI and New AI tools</strong>. I also run a YouTube channel where I share tech tutorials and deep-dives into the tools and concepts I work with every day and which might help other developers or students to understand complex patterns easily.</p>
               <p style="font-size:0.9rem;color:var(--text-muted);margin-bottom:1.5rem;">One of my videos has crossed <strong style="color:var(--accent);">96,000+ views</strong> &mdash; covering a topic that resonates with developers worldwide.</p>
               <a href="https://www.youtube.com/@prasadkadu9737" class="yt-channel-card" target="_blank" rel="noopener noreferrer">
                 <div class="yt-channel-icon"><i class="fab fa-youtube"></i></div>
@@ -560,8 +668,8 @@
           </div>
           <div class="interest-sub-content">
             <h3 class="interest-sub-title"><i class="fas fa-hat-wizard"></i> Harry Potter</h3>
-            <p>I am a massive Harry Potter fan — the wizarding world has always captured my imagination since childhood. The intricate lore, the spells, the friendships — it&apos;s storytelling at its finest.</p>
-            <p style="margin-top:0.75rem;">There&apos;s something deeply satisfying about how magic in the Harry Potter universe has rules, limitations, and elegance — not unlike good software architecture. Both reward curiosity and reward effort.</p>
+            <p>I am a massive Harry Potter fan, the wizarding world has always captured my imagination since childhood. The intricate lore, the spells, the friendships.</p>
+            <p style="margin-top:0.75rem;">There&apos;s something deeply satisfying about how magic in the Harry Potter universe has rules, limitations, and elegance.</p>
           </div>
         </div>
 
@@ -571,7 +679,7 @@
             <!-- Left: text + trophy info -->
             <div class="badminton-text">
               <h3 class="interest-sub-title badminton-inline-title"><span class="badminton-icon">🏸</span> Badminton</h3>
-              <p class="interest-sub-desc">Competitive badminton player with a passion for the game. Won the <strong>Men's Singles title</strong> at the <strong>Yash Badminton Open 2025</strong> &mdash; the quick reflexes and tactical thinking on the court translate surprisingly well to debugging sessions.</p>
+              <p class="interest-sub-desc">I picked up badminton at the age of 13, and since then, I have never put down the racket. Played mainly on weekends as time allows, it has become a hobby that helps me unwind and recharge. In 2025, I was honoured to win the <strong>Men's Singles title</strong> at the <strong>Yash Badminton Open 2025</strong>, organized by my organization in Pune.</p>
               <div class="badminton-stat-list">
                 <div class="badminton-stat">
                   <i class="fas fa-trophy"></i>

@@ -260,6 +260,128 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => txt.remove(), 800);
   });
 
+  // ===== Trek thumbnail hover/click switching =====
+  const trekMain = document.getElementById('trekMain');
+  const trekCaption = document.getElementById('trekCaption');
+  if (trekMain) {
+    const trekImgEl = trekMain.querySelector('img');
+    const trekViewBtn = trekMain.querySelector('.trek-view-btn');
+    const trekThumbs = document.querySelectorAll('.trek-thumb');
+    trekThumbs.forEach(thumb => {
+      const activate = () => {
+        trekThumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        trekImgEl.style.opacity = '0';
+        setTimeout(() => {
+          trekImgEl.src = thumb.dataset.src;
+          trekImgEl.style.opacity = '1';
+        }, 150);
+        if (trekCaption) trekCaption.innerHTML = thumb.dataset.caption;
+        if (trekViewBtn) trekViewBtn.dataset.src = thumb.dataset.src;
+      };
+      thumb.addEventListener('mouseenter', activate);
+      thumb.addEventListener('click', activate);
+    });
+  }
+
+  // ===== Photography thumbnail hover/click switching =====
+  const photoMain = document.getElementById('photographyMain');
+  const photoCaption = document.getElementById('photographyCaption');
+  if (photoMain) {
+    const photoImgEl = photoMain.querySelector('img');
+    const viewBtn = photoMain.querySelector('.photo-view-btn');
+    const photoThumbs = document.querySelectorAll('.photography-thumb');
+    photoThumbs.forEach(thumb => {
+      const activate = () => {
+        photoThumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        photoImgEl.style.opacity = '0';
+        setTimeout(() => {
+          photoImgEl.src = thumb.dataset.src;
+          photoImgEl.style.opacity = '1';
+        }, 150);
+        if (photoCaption) photoCaption.innerHTML = thumb.dataset.caption;
+        if (viewBtn) viewBtn.dataset.src = thumb.dataset.src;
+      };
+      thumb.addEventListener('mouseenter', activate);
+      thumb.addEventListener('click', activate);
+    });
+  }
+
+  // ===== Photo Lightbox =====
+  const lightbox = document.getElementById('photoLightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const lightboxClose = document.getElementById('lightboxClose');
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+
+  if (lightbox) {
+    let activeLightboxSet = [];
+    let lightboxIndex = 0;
+
+    function openLightbox(thumbs, index) {
+      activeLightboxSet = thumbs;
+      lightboxIndex = index;
+      const thumb = activeLightboxSet[lightboxIndex];
+      lightboxImg.src = thumb.dataset.src;
+      lightboxCaption.innerHTML = thumb.dataset.caption;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function showPrev() {
+      lightboxIndex = (lightboxIndex - 1 + activeLightboxSet.length) % activeLightboxSet.length;
+      lightboxImg.src = activeLightboxSet[lightboxIndex].dataset.src;
+      lightboxCaption.innerHTML = activeLightboxSet[lightboxIndex].dataset.caption;
+    }
+
+    function showNext() {
+      lightboxIndex = (lightboxIndex + 1) % activeLightboxSet.length;
+      lightboxImg.src = activeLightboxSet[lightboxIndex].dataset.src;
+      lightboxCaption.innerHTML = activeLightboxSet[lightboxIndex].dataset.caption;
+    }
+
+    // Setup lightbox for each viewer section
+    function setupViewerLightbox(thumbSelector, viewBtnSelector) {
+      const thumbs = Array.from(document.querySelectorAll(thumbSelector));
+      const btn = document.querySelector(viewBtnSelector);
+      if (btn) {
+        btn.addEventListener('click', () => {
+          const activeSrc = btn.dataset.src;
+          const idx = thumbs.findIndex(t => t.dataset.src === activeSrc);
+          openLightbox(thumbs, idx >= 0 ? idx : 0);
+        });
+      }
+      thumbs.forEach((thumb, i) => {
+        thumb.addEventListener('dblclick', () => openLightbox(thumbs, i));
+      });
+    }
+
+    setupViewerLightbox('.trek-thumb', '.trek-view-btn');
+    setupViewerLightbox('.photography-thumb', '.photography-main-img .photo-view-btn');
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', showPrev);
+    lightboxNext.addEventListener('click', showNext);
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') showPrev();
+      if (e.key === 'ArrowRight') showNext();
+    });
+  }
+
   // Badminton thumbnail hover/click switching
   const mainImg = document.getElementById('badmintonMain');
   const caption = document.getElementById('badmintonCaption');

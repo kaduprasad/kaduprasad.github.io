@@ -83,10 +83,79 @@ b {
 .section {
   padding: 7rem 0;
   position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section:nth-child(odd)::before {
+  width: 500px;
+  height: 500px;
+  background: var(--accent);
+  top: -120px;
+  right: -120px;
+}
+
+.section:nth-child(even)::before {
+  width: 450px;
+  height: 450px;
+  background: #3c5ce0;
+  bottom: -100px;
+  left: -100px;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section:nth-child(odd)::after {
+  width: 350px;
+  height: 350px;
+  background: #4a73e0;
+  bottom: -80px;
+  left: 10%;
+}
+
+.section:nth-child(even)::after {
+  width: 400px;
+  height: 400px;
+  background: var(--accent);
+  top: -80px;
+  right: 10%;
 }
 
 .section:nth-child(even) {
-  background: var(--bg-secondary);
+  background-color: var(--bg-secondary);
+}
+
+/* Dot-grid + 4-corner accent glows on all non-hero sections */
+.section:not(.hero-section) {
+  background-image:
+    radial-gradient(ellipse 45% 60% at top    left,  rgba(74, 144, 232, 0.14) 0%, transparent 75%),
+    radial-gradient(ellipse 45% 60% at top    right, rgba(60,  92, 224, 0.14) 0%, transparent 75%),
+    radial-gradient(ellipse 45% 60% at bottom left,  rgba(60,  92, 224, 0.14) 0%, transparent 75%),
+    radial-gradient(ellipse 45% 60% at bottom right, rgba(74, 144, 232, 0.14) 0%, transparent 75%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: auto, auto, auto, auto, 28px 28px;
 }
 
 .section-title {
@@ -1207,11 +1276,12 @@ b {
 
 /* ===== Interests ===== */
 .interests-intro {
-  font-size: 1.05rem;
-  color: var(--text-secondary);
+  font-size: 1.15rem;
+  color: var(--text-primary);
   margin-bottom: 3rem;
-  max-width: 680px;
-  line-height: 1.8;
+  max-width: 720px;
+  line-height: 1.85;
+  opacity: 0.85;
 }
 
 .interest-subsection {
@@ -1250,11 +1320,22 @@ b {
 }
 
 .interest-sub-desc {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   max-width: 720px;
-  line-height: 1.8;
+  line-height: 1.85;
+}
+
+#interests p {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+#interests .interest-sub-content p {
+  color: #c0c8d8;
+  font-size: 1.02rem;
 }
 
 /* Harry Potter subsection */
@@ -1877,6 +1958,403 @@ body.light-mode .lumos-btn:hover {
 }
 
 /* ===== Light Mode Theme ===== */
+/* ===== Trek Section ===== */
+.trek-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.trek-inline-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.trek-stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.trek-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.trek-stat > i {
+  color: #4caf50;
+  font-size: 1.4rem;
+  margin-top: 0.25rem;
+  width: 24px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 6px rgba(76, 175, 80, 0.5));
+}
+
+.tstat-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.tstat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #4caf50 0%, #81c784 45%, #2e7d32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(76, 175, 80, 0.35));
+}
+
+.trek-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.trek-main-img {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: 440px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.trek-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+.trek-main-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.65rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.72), transparent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.trek-main-img:hover .photo-view-btn {
+  opacity: 1;
+}
+
+.trek-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.trek-thumb {
+  width: calc((100% - 4 * 0.5rem) / 5);
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.trek-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.trek-thumb.active,
+.trek-thumb:hover {
+  border-color: #4caf50;
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .trek-layout {
+    grid-template-columns: 1fr;
+  }
+  .trek-thumb {
+    width: calc((100% - 3 * 0.5rem) / 4);
+  }
+}
+
+/* ===== Photography Section ===== */
+.photography-layout {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.photography-inline-title {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.photography-stat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.5rem;
+}
+
+.photography-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.photography-stat > i {
+  color: var(--accent);
+  font-size: 1.4rem;
+  margin-top: 0.25rem;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.pstat-label {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.pstat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.photography-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.photography-main-img {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  max-height: 440px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.photography-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+.photography-main-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.65rem 1rem;
+  background: linear-gradient(to top, rgba(0,0,0,0.72), transparent);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.photo-view-btn {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.photography-main-img:hover .photo-view-btn {
+  opacity: 1;
+}
+
+.photo-view-btn:hover {
+  background: var(--accent);
+  transform: scale(1.1);
+}
+
+.photography-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.photography-thumb {
+  width: calc((100% - 4 * 0.5rem) / 5);
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.photography-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photography-thumb.active,
+.photography-thumb:hover {
+  border-color: var(--accent);
+  transform: scale(1.04);
+}
+
+@media (max-width: 768px) {
+  .photography-layout {
+    grid-template-columns: 1fr;
+  }
+  .photography-thumb {
+    width: calc((100% - 3 * 0.5rem) / 4);
+  }
+}
+
+/* ===== Photo Lightbox Modal ===== */
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.photo-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-content img {
+  max-width: 90vw;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.photo-lightbox.active .lightbox-content img {
+  animation: lightboxZoomIn 0.35s ease forwards;
+}
+
+@keyframes lightboxZoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-caption {
+  color: #ddd;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+  z-index: 2;
+}
+
+.lightbox-prev { left: 1.25rem; }
+.lightbox-next { right: 1.25rem; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+@media (max-width: 600px) {
+  .lightbox-prev,
+  .lightbox-next {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+  .lightbox-prev { left: 0.5rem; }
+  .lightbox-next { right: 0.5rem; }
+}
+
 body.light-mode {
   --bg-primary: #f5f5f7;
   --bg-secondary: #eaeaed;
